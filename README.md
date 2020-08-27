@@ -1,5 +1,7 @@
 Calendar component built on react + typescript using native Date API.
 
+![](calendar.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
