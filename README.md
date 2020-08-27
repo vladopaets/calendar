@@ -1,6 +1,6 @@
 Calendar component built on react + typescript using native Date API.
 
-![](calendar.png)
+![](calendar.gif)
 
 ## Available Scripts
 
