@@ -1,0 +1,8 @@
+{
+  "short_name": "React Calendar",
+  "name": "example of a calendar build on react",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
