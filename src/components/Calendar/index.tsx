@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import classNames from 'classnames';
 
-import {getDaysInMonth, subtract, add} from './helpers/date';
-import {MONTHS, WEEK_DAYS} from './constants';
+import {getDaysInMonth, subtract, add, isTheSameDay} from '../../helpers/date';
+import {MONTHS, WEEK_DAYS} from '../../constants';
 
 import {Props, State, Range}from './interface';
 import './styles.css';
@@ -81,6 +82,7 @@ class Calendar extends Component<Props, State> {
             return <> </>;
         }
 
+        const {selectedDay = ''} = this.props;
         const {start, end} = monthRange;
 
         const rangeArr = this.getCurrentMonthArr(start, end);
@@ -100,7 +102,10 @@ class Calendar extends Component<Props, State> {
 
                         return (
                             <div
-                                className={`day ${isDisabled ? 'disabled' : ''}`}
+                                className={classNames('day', {
+                                    'disabled': isDisabled,
+                                    'selected': isTheSameDay(item, selectedDay)
+                                })}
                                 key={index}
                                 onClick={() => this.onDayClick(item)}
                             >
@@ -138,7 +143,9 @@ class Calendar extends Component<Props, State> {
     }
 
     onDayClick = (day: Date) => {
-        console.log(day);
+        const {onDayClick} = this.props;
+
+        typeof onDayClick === 'function' && onDayClick(day);
     }
 
     render(): JSX.Element {

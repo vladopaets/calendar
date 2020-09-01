@@ -1,5 +1,6 @@
 export interface Props {
-
+    onDayClick?: (day: Date) => void,
+    selectedDay?: string
 }
 
 export interface Range {

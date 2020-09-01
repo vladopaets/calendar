@@ -1,0 +1,31 @@
+.click-outside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+.day-picker {
+    position: relative;
+}
+.day-picker p {
+    display: flex;
+    align-items: center;
+}
+.day-picker p span {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+.calendar-wrapper {
+    background-color: white;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.06);
+    padding: 25px;
+    z-index: 4;
+    position: absolute;
+    top: 45px;
+    left: 100px;
+    border-radius: 8px;
+}

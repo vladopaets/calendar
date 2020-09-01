@@ -38,4 +38,15 @@ function add(date: Date, count: number): Date | string {
     return new Date(diff);
 }
 
-export {getDaysInMonth, subtract, add};
+function isTheSameDay(day: Date | string, compareDay: Date | string): boolean {
+    if (!day || !compareDay) {
+        return false
+    }
+
+    const _day = new Date(day).getTime();
+    const _compareDay = new Date(compareDay).getTime();
+
+    return _day === _compareDay;
+}
+
+export {getDaysInMonth, subtract, add, isTheSameDay};

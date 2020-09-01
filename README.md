@@ -2,6 +2,11 @@ Calendar component built on react + typescript using native Date API.
 
 ![](calendar.gif)
 
+An example of day picker:
+
+![](day-picker.gif)
+
+
 ## Available Scripts
 
 In the project directory, you can run:

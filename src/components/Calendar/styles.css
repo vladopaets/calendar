@@ -69,3 +69,7 @@
 .day:nth-child(7n) {
   margin-right: 0;
 }
+.day.selected {
+    background-color: #4f4fdc;
+    color: white;
+}

@@ -1,0 +1,9 @@
+.app {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.app-calendar {
+    margin-bottom: 50px;
+}
